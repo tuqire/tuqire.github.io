@@ -141,7 +141,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "http://www.tuqire.com/js/";
+/******/ 	__webpack_require__.p = "https://tuqire.github.io/text-stars/assets/js/";
 /******/
 /******/ 	// on error function for async loading
 /******/ 	__webpack_require__.oe = function(err) { console.error(err); throw err; };
@@ -43865,13 +43865,13 @@ var three_module = __webpack_require__(0);
 // CONCATENATED MODULE: ./node_modules/three.js-fbo/src/utils.js
 
 
-const createDataTexture = ({
+function createDataTexture({
 	data,
 	tWidth,
 	tHeight,
 	format,
 	filterType
-}) => {
+}) {
 	const dataTexture = new three_module["DataTexture"](
 		data,
 		tWidth,
@@ -43885,7 +43885,7 @@ const createDataTexture = ({
 	dataTexture.flipY = false;
 
 	return dataTexture;
-};
+}
 
 // CONCATENATED MODULE: ./node_modules/three.js-fbo/src/index.js
 
