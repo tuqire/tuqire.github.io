@@ -1,71 +1,93 @@
-<!doctype html>
-<html>
-  <head>
-  	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-  	<script src="js/vendor.js"></script>
-  	<script src="js/bundle.js?v=1.3.1"></script>
-  	<title>Webcam Stars: By Tuqire Hussain</title>
-  	<link rel="icon" href="https://tuqire.github.io/webcam-stars/images/icon.png">
-  	<meta property="og:type"  content="website">
-  	<meta property="og:title" content="Webcam Stars: By Tuqire Hussain">
-  	<meta property="og:description" content="Use your webcam feed to control the stars">
-  	<meta property="og:image" content="https://tuqire.github.io/webcam-stars/fb.png">
-  </head>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+<!doctype html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><title>Webcam Stars - By Tuqire Hussain</title><style>body {
+			color: rgb(238, 238, 238);
+			background-color: #000000;
+			height: 100vh;
+			margin: 0px;
+			overflow: hidden;
+			font-family: Arial, sans-serif;
+			font-size: 12px;
+			line-height: 1.7;
+		}
 
-    body {
-      margin: 0;
-      padding: 0;
-    }
+		* {
+			box-sizing: border-box;
+		}
 
-    html,
-    body {
-      color: white;
-      font-family: arial, sans-serif;
-      font-size: 13px;
-      font-weight: normal;
-      height: 100%;
-      line-height: 1.5;
-    }
-  
-    #stars-simulation-container {
-      width: 100%;
-      height: 100%;
-    }
+		a {
+			color: inherit;
+			text-decoration: none;
+		}
 
-    #stars-simulation-container canvas {
-      position: absolute;
-    }
-    
-    h1 {
-      position: absolute;
-      bottom: 20px;
-      font-size: 20px;
-      font-weight: normal;
-      opacity: 0.7;
-      left: 40px;
-      margin: 0;
-      padding: 0;
-    }
+		a:hover {
+			text-decoration: underline;
+		}
 
-    #info {
-      bottom: 0;
-      color: black;
-      flex: 1;
-      padding: 15px;
-      position: fixed;
-      text-align: center;
-      width: 100%;
-    }
-  </style>
-  <body>
-		<div id="stars-simulation-container"></div>
-    <h1>Requires webcam access. (Desktop only)</h1>
-    <div id="info"></div>
-  </body>
-</html>
+		#container {
+			width: 100%;
+			height: 100%;
+			position: relative;
+		}
+
+		#select-quality {
+			display: none;
+			font-size: 15px;
+			position: relative;
+			top: 50%;
+			-ms-transform: translateY(-50%);
+			transform: translateY(-50%);
+			text-align: center;
+		}
+
+		.quality-selector {
+			cursor: pointer;
+			background: none;
+			color: inherit;
+			text-decoration: none;
+			font-size: 15px;
+			padding: 10px;
+			margin: 0 10px;
+			border: 1px solid white;
+		}
+
+		.quality-selector:hover {
+			background: #333;
+		}
+
+		h4 {
+			font-size: 25px;
+			margin: 0 20px 30px;
+		}
+
+		#no-support {
+			display: none;
+			position: relative;
+			top: 50%;
+			-ms-transform: translateY(-50%);
+			transform: translateY(-50%);
+			text-align: center;
+		}
+
+		#info {
+			display: none;
+			line-height: 2;
+			background-color: rgb(26, 26, 26);
+			position: absolute;
+			bottom: 0px;
+			box-sizing: border-box;
+		}
+
+		.info-content {
+			padding: 15px;
+		}
+
+		.hide-info-button {
+			display: block;
+			cursor: pointer;
+			background-color: rgb(20, 20, 20);
+			padding: 5px 10px;
+			position: absolute;
+			width: 100%;
+			min-width: 80px;
+			left: 0;
+			top: -30px;
+		}</style><meta property="og:url" content="https://tuqire.github.com/webcam-stars/"><meta property="og:type" content="article"><meta property="og:title" content="Webcam Stars"><meta property="og:description" content="A stars simulation driven by Webcam"><meta property="og:image" content="https://tuqire.github.com/webcam-stars/images/fb-share.jpg"></head><body><div id="container"><div id="simulation"></div><div id="select-quality"><h4>Select Quality</h4><a class="quality-selector" href="?quality=30000">Very Low</a> <a class="quality-selector" href="?quality=40000">Low</a> <a class="quality-selector" href="?quality=50000">Medium</a> <a class="quality-selector" href="?quality=75000">High</a> <a class="quality-selector" href="?quality=100000">Very High</a></div><div id="no-support"><h4>Your device or browser is not supported. Please use the latest version of Chrome on desktop.</h4></div><div id="info"><a class="hide-info-button">Close</a><div class="info-content">Number of particles: <span class="num-particles">0</span><br>By <a target="_blank" href="http://www.tuqire.com">Tuqire Hussain</a> [<a target="_blank" href="https://github.com/tuqire/webcam-stars">View Code</a>]<br>Select Quality: <a href="?quality=30000">V Low</a> | <a href="?quality=40000">Low</a> | <a href="?quality=50000">Medium</a> | <a href="?quality=75000">High</a> | <a href="?quality=100000">V High</a></div></div></div><script type="text/javascript" src="js/runtime.80bda153142e67f1a97c.js"></script><script type="text/javascript" src="js/vendors.80bda153142e67f1a97c.js"></script><script type="text/javascript" src="js/main.80bda153142e67f1a97c.js"></script></body>
