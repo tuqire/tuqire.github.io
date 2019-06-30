@@ -11,12 +11,12 @@ tuqire hussain's portfolio
 
 ## Webcam Outline WEBGL project
 
-[tuqire.github.io/text-stars/](https://tuqire.github.io/webcam-outline/)
+[tuqire.github.io/webcam-outline/](https://tuqire.github.io/webcam-outline/)
+
+## Webcam Stars WEBGL project
+
+[tuqire.github.io/webcam-stars/](https://tuqire.github.io/webcam-stars/)
 
 ## Webcam Particles WEBGL project
 
 [tuqire.github.io/webcam-particles/](https://tuqire.github.io/webcam-particles/)
-
-## Webcam Stars WEBGL project
-
-[tuqire.github.io/text-stars/](https://tuqire.github.io/webcam-stars/)
